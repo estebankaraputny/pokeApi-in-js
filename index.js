@@ -28,10 +28,6 @@ let div = ``;
 
 const pokemonesFull = (arrayPokemones) => {
   const pokemones = arrayPokemones.map((pokemon) => {
-    console.log("ID: ", pokemon.id);
-    console.log("Name: ", pokemon.name);
-    console.log("sprites", pokemon.sprites.front_default);
-
     return (div += `
             <div class="pokeCard">
                 <div class="contentImage">
@@ -45,9 +41,64 @@ const pokemonesFull = (arrayPokemones) => {
   contentCards.innerHTML = div;
 };
 
-// const searchPokemones = document.getElementById("searchPokemones")
+const searchPokemones = document.getElementById("searchPokemones")
 
 
 // searchPokemones.addEventListener("keyup", (event) =>{
+//   const menssageErr = document.getElementById("menssageError")
+//   let menssage = ``;
+  
+//   if(){
+//         menssage += `
+//         <div class="pokeCard">
+//                 <div class="contentImage">
+//                     <img src="https://i.gifer.com/fetch/w300-preview/02/0220ce6d1515887ce5feedc6ccec9845.gif" alt="" class="imageOfPokemon"></img>
+//                 </div>
+//                 <h2 class="namePokemon">¡Ups! Pokemon no encontrado.</h2>
+//                 <p class="idPokemon">Vuelve a intentarlo.</p>
+//             </div>
+//         <img src="">
+//         <h4></h4>
+//         `
+//       }
+//       menssageErr.innerHTML = menssage; //Mensaje que solo se mostrara si no se encuentra lo ingresado en el input
+// })
+  
 
+
+
+
+
+
+
+
+
+
+
+
+// const inputSearch = document.getElementById("textSearch")
+// const cardsAll = document.querySelectorAll(".card")
+// // console.log("Card All",cardsAll)
+
+// inputSearch.addEventListener("keyup", (event) =>{
+//   let arrayContentCardHidden = [];
+//   const menssageErr = document.getElementById("menssageError")
+//   let menssagge= ``
+//   cardsAll.forEach((card) => {
+
+//     card.textContent.toLowerCase().includes(event.target.value.toLowerCase())
+//     ? card.classList.remove("hidden") // Si cae en true la sentencia anterior, ocurre esto
+//     : card.classList.add("hidden") // Si cae en false la sentencia anterior, ocurre esto
+
+//     if(card.classList.contains("hidden")){
+//       arrayContentCardHidden.push(card)
+//     }
+//   })
+
+//   if(arrayContentCardHidden.length === cardsAll.length){
+//     menssagge += `
+//       <h4>Evento no encontrado, por favor vuelva a intentarlo</h4>
+//     `
+//   }
+//   menssageErr.innerHTML = menssagge; //Mensaje que solo se mostrara si no se encuentra lo ingresado en el input
 // })
