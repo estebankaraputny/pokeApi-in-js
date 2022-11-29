@@ -35,13 +35,14 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding-top: 50px;
+    min-height: 100vh;
 }
 
 
 .pokeCard {
     background-color: aliceblue;
     width: 200px;
-    height: 250px;
+    height: 280px;
     margin: 5px;
     box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.719);
     padding: 10px;
@@ -70,4 +71,9 @@
 
 .hidden{
     display: none;
+}
+
+
+.cardError{
+    margin-top: 55px;
 }
