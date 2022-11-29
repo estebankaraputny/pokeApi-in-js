@@ -44,25 +44,36 @@ const pokemonesFull = (arrayPokemones) => {
 const searchPokemones = document.getElementById("searchPokemones")
 
 
-// searchPokemones.addEventListener("keyup", (event) =>{
-//   const menssageErr = document.getElementById("menssageError")
-//   let menssage = ``;
+searchPokemones.addEventListener("keyup", (event) =>{
+  // console.log(event.target.value)
+
+  if (event.target.matches("#searchPokemones")){
+    document.querySelectorAll(".pokeCard").forEach(pokemon => {
+      pokemon.textContent.toLowerCase().includes(event.target.value.toLowerCase())
+      ? pokemon.classList.remove("hidden")
+      : pokemon.classList.add("hidden")
+    })
+  }
+
+  const menssageErr = document.getElementById("menssageError")
+  let menssage = ``;
   
-//   if(){
-//         menssage += `
-//         <div class="pokeCard">
-//                 <div class="contentImage">
-//                     <img src="https://i.gifer.com/fetch/w300-preview/02/0220ce6d1515887ce5feedc6ccec9845.gif" alt="" class="imageOfPokemon"></img>
-//                 </div>
-//                 <h2 class="namePokemon">¡Ups! Pokemon no encontrado.</h2>
-//                 <p class="idPokemon">Vuelve a intentarlo.</p>
-//             </div>
-//         <img src="">
-//         <h4></h4>
-//         `
-//       }
-//       menssageErr.innerHTML = menssage; //Mensaje que solo se mostrara si no se encuentra lo ingresado en el input
-// })
+
+  if(event.target.matches("#searchPokemones")){
+        menssage += `
+        <div class="pokeCard">
+                <div class="contentImage">
+                    <img src="https://i.gifer.com/fetch/w300-preview/02/0220ce6d1515887ce5feedc6ccec9845.gif" alt="" class="imageOfPokemon"></img>
+                </div>
+                <h2 class="namePokemon">¡Ups! Pokemon no encontrado.</h2>
+                <p class="idPokemon">Vuelve a intentarlo.</p>
+            </div>
+        <img src="">
+        <h4></h4>
+        `
+      }
+      menssageErr.innerHTML = menssage; //Mensaje que solo se mostrara si no se encuentra lo ingresado en el input
+})
   
 
 
